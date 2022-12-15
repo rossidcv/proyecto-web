@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test para tu piel</title>
+  <link rel="icon" href="./css/imagenes/brand.png" type="image/x-icn">
+  <!-- Iconos -->  
+  <link rel="icon" href="./imagenes/brand.png" type="image/x-icn">
+  <script src="https://kit.fontawesome.com/0e1536cc0c.js" crossorigin="anonymous"></script>
+  <!-- Css --> 
+  <link rel="stylesheet" href="./css/estilos.css">
+</head>
+
+<body>
+
+  <main>
+    <div class="t-backg col-12 col-m-12">
+      <div class="col-12 col-m-12 t-title">
+        <h1 >Test de tu piel</h1>
+      </div>
+      <div class="col-12 col-m-12 t-sub">
+        <p>¿Querés averiguar cual sería tu skincare ideal?</p>
+      </div>
+    </div>
+
+    <div class="col-12 t-steps-bkg ">
+      <div class="col-4 col-m-12 col-sm-12 pad-test">
+        <div class="t-steps-h">
+          <h4>Paso 1</h4>
+        </div>
+        <div class="t-steps-txt">
+          <p>Procurá que tu rostro se encuentre limpio, despejado y sin ningún resto de maquillaje</p>
+        </div>
+      </div>
+      <div class="col-4 t-s-marg col-m-12 col-sm-12 pad-test">
+        <div class="t-steps-h">
+          <h4>Paso 2</h4>
+        </div>
+        <div class="t-steps-txt t-txtm">
+          <p>Al realizar la evaluación debes encontrarte en un lugar bien iluminado, preferiblemente con luz natural</p>
+        </div>
+      </div>
+      <div class="col-4 col-m-12 col-sm-12 pad-test">
+        <div class="t-steps-h">
+          <h4>Paso 3</h4>
+        </div>
+        <div class="t-steps-txt">
+          <p>Debes considerar las condiciones ambientales como así también tu día a día, por ejemplo, si el clima es muy húmedo o caluroso o si talvez estás atravesando algún proceso alérgico
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="t-form col-12 col-m-12">
+      <form action="/formulario" method="dialog">
+        <div class="t-answ col-6 col-m-12">
+          <label for="type" class="t-label">¿Cómo es su piel?</label><br>
+          <select class="t-input" id="type">
+            <option value="none"></option>
+            <option value="grasa">Grasa</option>
+            <option value="seca">Seca</option>
+            <option value="mixta">Mixta</option>
+          </select>
+        </div>
+        <div class="t-answ col-6 col-m-12">
+          <label for="type" class="t-label">¿Su piel es sensible?</label><br>
+          <select class="t-input" id="sensitivity">
+            <option value="none"></option>
+            <option value="ySens">Si</option>
+            <option value="nSens">No</option>
+          </select>
+        </div>
+        <div class="t-answ col-6 col-m-12">
+          <label for="type" class="t-label">¿Posee acne?</label><br>
+          <select class="t-input" id="acne">
+            <option value="none"></option>
+            <option value="yAcne">Si</option>
+            <option value="nAcne">No</option>
+          </select>
+        </div>
+        <div class="t-answ col-6 col-m-12">
+          <label for="type" class="t-label">¿Posee signos de envejecimiento?</label><br>
+          <select class="t-input"id="oldSkin" >
+            <option value="none"></option>
+            <option value="yOld">Si</option>
+            <option value="nOld">No</option>
+          </select>
+        </div>
+        <div class="t-e-btn col-12 col-m-12">
+          <button class="t-btn" type="submit" onclick="getSelectValue()">Enviar</button>
+        </div>  
+      </form>
+    </div>
+
+    <div id="warn" class="t-warn col-12 col-m-12">
+    </div>
+
+    <div id="cards" class="t-cards col-12 col-m-12">
+    </div>
+
+  </main>
+
+  <script src="./js/test.js"></script>
+  <script src="./js/funciones.js" ></script>
+  
+</body>
+</html>

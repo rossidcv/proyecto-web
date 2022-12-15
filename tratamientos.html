@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto Skincare / Tratamientos</title>
+  <script src="https://kit.fontawesome.com/e15e8c34af.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <!-- Iconos -->  
+  <link rel="icon" href="./imagenes/brand.png" type="image/x-icn">
+  <script src="https://kit.fontawesome.com/0e1536cc0c.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/estilos.css">
+</head>
+
+<body>
+  <main>
+    <div class="encabezado-tratamientos"> 
+      <h3>Tratamientos</h3>
+    </div>    
+    <div class="col-md-12 col-sm-12">
+      <div id="app">                
+        <div class="filtro">
+          <div class="container">
+            <p>FILTRAR POR:
+              <select v-model="tratamiento" name="tratamiento" id="" >
+                <option  id="tratamiento" v-for="tratamiento of tratamientos" >{{tratamiento}}</option>
+              </select>
+              <button class="btn btn-success" v-on:click="filtro() ">Buscar</button> 
+              <button class="btn btn-secondary" @click="orden()">Ordenar por precio</button>
+            </p>
+          </div>
+        </div>
+
+        <section class="lista-productos">
+          <div class="container">
+            <div v-for="producto of productos" class="card" style="width:31%; float:left; margin:1% 1%">
+              <img class="card-img-top" :src="producto.imagen" alt="Card image">
+              <div class="card-body">
+                <p class="card-text" style="text-transform:uppercase; color:#E08582">{{producto.tratamiento}}</p>
+                <h4 class="card-title">{{producto.nombre}}</h4>
+                <p class="card-text">Descripcion:{{producto.descripcion}}</p>                                
+                <p class="card-text" style="font-weight: 500; font-size: 2rem;color:#000">${{producto.precio}}</p>
+                <a href="#" class="btn btn-primary">Ver Producto</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>        
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/funciones.js" ></script>
+
+</body>
+</html>
